@@ -1,0 +1,118 @@
+* {
+  /*Resetear estilos que vienen por default en el navegador*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*Declaramos variables para reutilizar los colores*/
+  --color_texto: #5c3d5b;
+  --color_elemntos_fieldset: #4d3e6d;
+  --color_fieldset_boton: #f07360;
+}
+
+header {
+  display: flex; /* Visualizacion en un contenedor flexible*/
+  justify-content: space-between; /*Distribuye uniformemente los elementos a lo largo del contenedor*/
+  padding: 10px;
+}
+
+#logo {
+  width: 80px;
+  height: auto; /*Automatico mantiene la proporcion*/
+  margin: 20px 30px 35px 15px; /* Top,right,bottom, left  */
+}
+
+nav > ul {
+  list-style-type: none; /*Se eliminan los marcadores de lista*/
+  display: flex;
+}
+
+/* Elementos de la barra e navegacion*/
+.elementos-navegacion {
+  margin: 20px 50px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: x-large;
+  font-style: normal;
+}
+
+.elementos-navegacion a {
+  text-decoration: none; /*Elimina el subrayado de los hipervinculos*/
+  color: var(--color_texto); /* Cambiar el color con una variable*/
+}
+
+.elementos-navegacion a:hover {
+  /*Uso de la pseduo-clase hover(al pasar el mouse)*/
+  color: #f07360;
+  text-decoration: underline overline;
+}
+
+h1 {
+  color: var(--color_texto);
+  text-align: center;
+}
+
+form {
+  margin: 0 auto;
+  width: 70%; /* Ocupa el 70% del contenedor principal */
+  max-width: 800px; /*Ancho maximo */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 400px;
+  text-align: center;
+  font-style: normal;
+}
+
+fieldset {
+  border-color: var(--color_fieldset_boton);
+  border-radius: 1.2em;
+  color: var(--color_elemntos_fieldset);
+  margin: 20px;
+}
+
+legend {
+  text-align: left;
+  font-size: 1.6em;
+}
+
+/* Pseudoelemento */
+legend::first-letter {
+  color: var(
+    --color_fieldset_boton
+  ); /* Establece el color de la primera letra utilizando la variable definida*/
+}
+
+#datos-basicos,
+#datos-pedido,
+#datos-envio {
+  padding: 30px 50px;
+}
+
+#datos-basicos input,
+#datos-pedido input,
+#datos-envio input {
+  border: 3px solid var(--color_elemntos_fieldset);
+  width: 200px;
+  height: 30px;
+}
+
+/* Estilos a campos de entrada cuando esten focos*/
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  outline: none;
+  box-shadow: 5px 3px var(--color_elemntos_fieldset); /* Agrega una sombra cuando se enfoca el campo*/
+}
+
+#datos-pedido select[name="opciones-postre"] {
+  width: 200px;
+  height: 30px;
+  border: 3px solid var(--color_elementos_fieldset);
+}
+
+/* 
+button[type="submit"] {
+  
+} */

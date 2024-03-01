@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./assets/css/formulario.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="./assets/img/cookie.png"
+        alt="Logo de galleta mordida"
+        id="logo"
+      />
+      <nav>
+        <ul>
+          <!--TARGET es para que te abra una nueva pestaña la url linkeada y no en la misma-->
+          <li class="elementos-navegacion">
+            <a href="./index.html" target="_blank"> Inicio </a>
+          </li>
+          <li class="elementos-navegacion">
+            <a href="./index.html"> Nosotros</a>
+          </li>
+          <li class="elementos-navegacion">
+            <a href="./formulario.html"> Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Haz tu pedido!</h1>
+      <form
+        action="https://formsubmit.co/karenlaguapa19@email.com"
+        method="POST"
+      >
+        <fieldset id="datos-basicos">
+          <legend>Datos Básicos</legend>
+          Nombre completo :
+          <input
+            type="text"
+            placeholder="Blanca Perez"
+            name="nombre"
+            required
+          />
+          <br />
+          Correo Electrónico:<input
+            type="email"
+            placeholder="tucorreo@correo.com"
+            name="email"
+          />
+          <br />
+          Numero de télefono:
+          <input type="tel" name="teléfono" required placeholder="5589898989" />
+        </fieldset>
+
+        <fieldset id="datos-pedido">
+          <legend>Datos del pedido</legend>
+          ¿Que tipo de postre necesitas?
+          <select name="Opciones postre">
+            <!--Opciones desplegables, pero hace tu usuario haga scroll infinito hasta encontrar la opcion deseada-->
+            <option value="Galletas">Galletas</option>
+            <option value="Pasteles">Pasteles</option>
+            <option value="Brownies">Brownies</option>
+            <option value="Arroz con leche">Arroz con leche</option>
+          </select>
+          <br />
+          <input list="Opciones-postre-2" />
+          <datalist id="Opciones-postre-2">
+            <option value="Galletas">Galletas</option>
+            <option value="Pasteles">Pasteles</option>
+            <option value="Brownies">Brownies</option>
+            <option value="Arroz con leche">Arroz con leche</option>
+          </datalist>
+          <br />
+          ¿Cuantas unidades necesitas?
+          <input type="number" min="6" max="100" required placeholder="6" />
+          <br />
+          Fecha del evento: <input type="date" />
+        </fieldset>
+        <fieldset id="datos-envio">
+          <legend>Datos del envío</legend>
+          <!--Seleccionar una opcion pero se puede seleccionar todas y eso no funciona-->
+          Recoger en sucursal: <input type="radio" /> Envío a Domicilio:
+          <input type="radio" /> Punto de entrega: <input type="radio" />
+
+          <br />
+          <input type="checkbox" /> Acepto terminos y condiciones
+          <br />
+          <button type="submit">Enviar ya!</button>
+          <br />
+          <input type="submit" />
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>

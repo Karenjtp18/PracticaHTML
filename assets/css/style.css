@@ -1,0 +1,33 @@
+* {
+  /* Selector universal */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*Selector de tipo, elemento, etiqueta*/
+  background-color: blueviolet;
+}
+
+p,
+h1,
+h2 {
+  /*Selector de todos los elementos p */
+  color: aqua;
+}
+
+table {
+  border: 4px solid darkred;
+  border-spacing: 6px;
+  text-align: center;
+}
+
+th,
+td {
+  border: 2px solid red;
+  background-color: palevioletred;
+}
+
+td {
+  background-color: coral;
+}

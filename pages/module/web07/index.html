@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+    <script>
+      console.log("Me ejecuto dentro del HTML");
+    </script>
+  </head>
+  <body>
+    <!--Script interno-->
+    <script>
+      console.log("Me ejecuto dentro de body");
+    </script>
+    <main>
+      <article>
+        <h1 onclick="handleTitle()" id="title">Sesion Web07</h1>
+        <p onclick="changeColor('blue')" id="description">
+          A esta coherte le gustan los elotes
+        </p>
+      </article>
+      <article>
+        <h2 class="title-article">Historia del elote</h2>
+        <p onclick="changeColorTextUsingThis('#CCCCFF', this)">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+         <p onclick="changeColorTextUsingThis('yellow', this)"> <strong>Penny</strong> prefiere en vaso(esquite)</p>
+        <!-- Agregar un P con la preferencia de tu color y que esquite te gusta -->
+         <p onclick="changeColorTextUsingThis('#FF0080', this)"> <strong>Karen</strong> prefiere el elote en vaso</p>
+         <p onclick="changeColorTextUsingThis('#5D6D7E', this)"> <strong>Sergio</strong> prefiere el elote amarillo completo</p>
+        </article>
+      </article>
+    <article>
+        <button onclick="changeColorUsingClass()">Cambiar color titulos</button>
+    </article>
+    <article>
+      <button onclick="resetColorParagraph()"> Reiniciar colores parrafos</button>
+    </article>
+    </main>
+    <!--AQUI MERO SE RECOMIENDA PONER LOS SCRIPT EXTERNOS-->
+    <!--Script externo-->
+    <script src="./script.js"></script>
+  </body>
+</html>
